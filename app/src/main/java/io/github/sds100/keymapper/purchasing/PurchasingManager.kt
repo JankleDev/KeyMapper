@@ -10,6 +10,9 @@ interface PurchasingManager {
     val purchases: Flow<State<Result<Set<ProductId>>>>
     suspend fun launchPurchasingFlow(product: ProductId): Result<Unit>
     suspend fun getProductPrice(product: ProductId): Result<String>
-    suspend fun isPurchased(product: ProductId): Result<Boolean>
+    suspend fun isPurchased(product: ProductId): Result<Boolean> {
+        // Always return true
+        return Result.Success(true)
+    }
     fun refresh()
 }
