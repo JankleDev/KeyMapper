@@ -19,5 +19,5 @@ class ListFloatingLayoutsUseCaseImpl(
 ) : ListFloatingLayoutsUseCase,
     PurchasingManager by purchasingManager {
 
-    override val showFloatingLayouts: Flow<Boolean> = flowOf(false)
+    override val showFloatingLayouts: Flow<Boolean> = flowOf(true)
 }
