@@ -111,7 +111,7 @@ class HomeViewModel(
     }
 
     private fun buildNavBarItems(
-        showFloatingLayouts: Boolean,
+        showFloatingLayoutst: Boolean,
         viewedAdvancedTriggers: Boolean,
     ): List<HomeNavBarItem> {
         val items = mutableListOf<HomeNavBarItem>()
@@ -124,7 +124,7 @@ class HomeViewModel(
             ),
         )
 
-        if (showFloatingLayouts && Build.VERSION.SDK_INT >= Constants.MIN_API_FLOATING_BUTTONS) {
+        if (Build.VERSION.SDK_INT >= Constants.MIN_API_FLOATING_BUTTONS) {
             items.add(
                 HomeNavBarItem(
                     HomeDestination.FloatingButtons,
